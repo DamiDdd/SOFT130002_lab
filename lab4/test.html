@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>lab4</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="nav">
+    <ul>
+        <li><img class="logo" src="img/logo.png"></li>
+        <li><a class="active" href="index.html">首页</a></li>
+        <li><a href="browser.html">浏览页</a></li>
+        <li><a href="search.html">搜索页</a></li>
+        <div class="menu">
+            <a href="personal.html" class="dropBtn">个人中心</a>
+            <div class="insideMenu">
+                <a href="upload.html"><img class="icon" src="img/icon/backup_cloud_server_storage_upload_512px_1225436_easyicon.net.png">上传</a>
+                <a href="photo.html"><img class="icon" src="img/icon/banking_card_credit_finance_payment_512px_1225439_easyicon.net.png">我的照片</a>
+                <a href="favorite.html"><img class="icon" src="img/icon/bookmark_favorite_like_rate_star_512px_1225452_easyicon.net.png">我的收藏</a>
+                <a href="login.html"><img class="icon" src="img/icon/access_enter_input_login_sign_in_512px_1225471_easyicon.net.png">登入</a>
+            </div>
+        </div>
+    </ul>
+</div>
+<div class="mainContainer">
+    <div id="slidershow" class="carousel slide" data-ride="carousel" data-interval = 2000 data-pause = "hover" data-wrap="true" style="margin-top: 5rem; margin-left:auto; margin-right:auto;margin-bottom: 5rem;">
+        <!-- 设置图片轮播的顺序 -->
+        <ol class="carousel-indicators">
+            <li class="active" data-target="#slidershow" data-slide-to="0" ></li>
+            <li data-target="#slidershow" data-slide-to="1"></li>
+            <li data-target="#slidershow" data-slide-to="2"></li>
+        </ol>
+        <!--设置轮播的图片-->
+        <div class="carousel-inner">
+            <div class="item active">
+                <a href="##"><img src="./img/lab4/1.jpg" alt="/"></a>
+            </div>
+            <div class="item">
+                <a href="##"><img src="./img/lab4/2.jpeg" alt="/"></a>
+            </div>
+            <div class="item">
+                <a href="##"><img src="./img/lab4/3.png" alt="/"></a>
+            </div>
+        </div>
+        <a class="left carousel-control" href="#slidershow" role="button" data-slide="prev" >
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#slidershow" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+<!--    <div class="headImg"><img src="img/head.png"></div>-->
+    <p class="bigTitle">图片精选</p>
+    <div class="tempPhoto">
+        <div class="responsive">
+            <div class="imgDiv">
+                <a target="_blank" href="detail.html">
+                    <img src="img/tempImages/1.jpg">
+                </a>
+                <div class="text imgTitle">title</div>
+                <div class="text desc">Add a description of the image</div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="imgDiv">
+                <a target="_blank" href="detail.html">
+                    <img src="img/tempImages/2.jpg">
+                </a>
+                <div class="text imgTitle">title</div>
+                <div class="text desc">Add a description of the image</div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="imgDiv">
+                <a target="_blank" href="detail.html">
+                    <img src="img/tempImages/3.jpg">
+                </a>
+                <div class="text imgTitle">title</div>
+                <div class="text desc">Add a description of the image</div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="imgDiv">
+                <a target="_blank" href="detail.html">
+                    <img src="img/tempImages/4.jpg">
+                </a>
+                <div class="text imgTitle">title</div>
+                <div class="text desc">Add a description of the image</div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="imgDiv">
+                <a target="_blank" href="detail.html">
+                    <img src="img/tempImages/5.jpg">
+                </a>
+                <div class="text imgTitle">title</div>
+                <div class="text desc">Add a description of the image</div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="imgDiv">
+                <a target="_blank" href="detail.html">
+                    <img src="img/tempImages/6.jpg">
+                </a>
+                <div class="text imgTitle">title</div>
+                <div class="text desc">Add a description of the image</div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="imgDiv">
+                <a target="_blank" href="detail.html">
+                    <img src="img/tempImages/6.jpg">
+                </a>
+                <div class="text imgTitle">title</div>
+                <div class="text desc">Add a description of the image</div>
+            </div>
+        </div>
+        <div class="responsive">
+            <div class="imgDiv">
+                <a target="_blank" href="detail.html">
+                    <img src="img/tempImages/6.jpg">
+                </a>
+                <div class="text imgTitle">title</div>
+                <div class="text desc">Add a description of the image</div>
+            </div>
+        </div>
+    </div>
+</div>
+<a href="" id="refreshBtn" title="refresh"></a>
+<a href="" id="ontopBtn" title="top"></a>
+<div class="footer"><p>我是一个页脚 @16307110125_qujunjie</p></div>
+</body>
