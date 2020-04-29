@@ -90,16 +90,39 @@ function testKeyBoard(wantInput, actualInput) {
     let res = new Set();
     let wantLen = wantInput.length;
     let actLen =  actualInput.length;
+    let reg = /[A-Z]/;
+    let capslock = false;
+    if(reg.test(actualInput)){
+        capslock = true;
+    }
+    let capslockAdd = false;
     for(let i = 0, j = 0; i < wantLen; i++){
-        if(wantInput.charAt(i) !== actualInput.charAt(j)){
-            res.add(wantInput.charAt(i));
+        if(wantInput.charAt(i) !== actualInput.charAt(j)) {
+            if(!reg.test(wantInput.charAt(i)) || capslock) {
+                res.add(wantInput.charAt(i).toUpperCase());
+            }
+            else{
+                let lower = wantInput.charAt(i).toLowerCase();
+                if(wantInput.indexOf(lower) !== -1 && actualInput.indexOf(lower) === -1){
+                    res.add(wantInput.charAt(i).toUpperCase());
+                }
+                else if(wantInput.indexOf(lower) === -1 && !capslockAdd){
+                    console.log("uncertain "+ wantInput.charAt(i));
+                }
+                else if(wantInput.indexOf(lower) !== -1 && actualInput.indexOf(lower) !== -1){
+                    capslockAdd = true;
+                }
+            }
         }
         else{
             j++;
         }
     }
-    const array = Array.from(res);
-    console.log("4. " + array);
+    let ans = Array.from(res);
+    if (capslockAdd){
+        ans[ans.length] = "CAPS LOCK";
+    }
+    console.log("4. " + ans);
     return res;
 }
 
@@ -243,6 +266,8 @@ testMail("1118755555","22e2qeq2@dwda.scdda");
 testMail("13355555555",'834767813@qq.com');
 testRedundancy("Is is the iS is cost of of gasoline going up up a a d d a A wd wd ad ad wdad wdad word word play play");
 testKeyBoard("7_This_is_a_test","_hs_s_a_es");
+testKeyBoard("7_This_is_a_test","_hs_s_a_test");
+testKeyBoard("7_This_is_a_es","_hs_s_a_es");
 console.log("5. " + testSpecialReverse("   hello world! I   don't want to   see you anymore.   "));
 twoSum([7,2,11,15,3,6,4,5],14);
 console.log("7. " + lengthOfLongestSubstring("abbbbbdawwowda"));
