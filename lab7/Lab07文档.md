@@ -1,0 +1,14 @@
+# Lab07设计文档
+
+本次lab考察js HTML DOM
+
+使用for循环遍历works中每一个项目（用以动态创建页面）
+createElement用于创建指定元素
+页面基本是空的，直接选择body添加子节点即可
+appendChild用于添加节点
+innerHTML可以直接设置元素内容
+修改元素的classList利用预设的css style
+setAttribute可以指定img的src
+也可以在js中通过style修改元素样式，本次用来补充达到inline不换行的效果
+
+
